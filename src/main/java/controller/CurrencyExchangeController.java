@@ -18,7 +18,6 @@ public class CurrencyExchangeController {
     private CurrencyExchangeRepository repository;
     @GetMapping("/currency-exchange/from/{from}/to/{to}")
     public CurrencyExchange retrieveExchangeValue(@PathVariable String from, @PathVariable String to){
-//        CurrencyExchange currencyExchange =new CurrencyExchange(100l, from, to, BigDecimal.valueOf(50));
         CurrencyExchange currencyExchange =repository.findByFromAndTo(from, to);
         if (currencyExchange==null){
             throw new RuntimeException("Unable to find data for" +from+ "to" +to);
