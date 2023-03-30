@@ -1,5 +1,8 @@
 package model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import java.math.BigDecimal;
